@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #efe4bf;
+  }
+  
+  /* HEADER */
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: #f2dfca;
+    border-bottom: 2px solid #d79c3b;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid #d79c3b;
+    background: #f5e4d2;
+  }
+  
+  nav {
+    display: flex;
+    gap: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 15px;
+    border: 2px solid #d79c3b;
+    background: #f5e4d2;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    background: #d79c3b;
+    color: white;
+  }
+  
+  /* HERO */
+  
+  .carousel {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  /* GRID */
+  
+  .products {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding-bottom: 40px;
+  }
+  
+  /* CARD */
+  
+  .card {
+    background: #f3dfc4;
+    border: 2px solid #d79c3b;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+  
+    aspect-ratio: 4 / 3;   /* moderní poměr */
+    object-fit: cover;
+    object-position: center;
+  
+    display: block;
+  }
+  /* TEXT */
+  
+  .card p {
+    font-size: 14px;
+    padding: 10px;
+    color: #333;
+  }
+  
+  /* CENA */
+  
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #b8791f;
+    margin-bottom: 10px;
+  }
+  
+  /* BUTTON */
+  
+  .card button {
+    margin-bottom: 15px;
+    padding: 10px 18px;
+    border: none;
+    background: #d79c3b;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .card button:hover {
+    background: #b8791f;
+    transform: scale(1.05);
+  }
+  .price {
+    display: inline-block;
+  
+    margin: 10px 0 5px;
+    padding: 6px 14px;
+  
+    font-size: 15px;
+    font-weight: bold;
+  
+    color: white;
+    background: linear-gradient(135deg, #d79c3b, #b8791f);
+  
+    border-radius: 20px;
+  
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  
+    letter-spacing: 0.5px;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background: #f2dfca;
+    border-top: 2px solid #d79c3b;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 900px) {
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .products {
+      grid-template-columns: 1fr;
+    }
+  
+    footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }
