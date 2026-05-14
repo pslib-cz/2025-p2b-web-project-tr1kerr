@@ -73,22 +73,25 @@
     border-radius: 20px;
     overflow: hidden;
     text-align: center;
-    transition: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    
   }
   
   .card img {
     width: 100%;
-  
-    aspect-ratio: 4 / 3;   /* moderní poměr */
+    
+    aspect-ratio: 4 / 3;   
     object-fit: cover;
     object-position: center;
   
     display: block;
   }
+  
   /* TEXT */
   
   .card p {
@@ -116,12 +119,13 @@
     color: white;
     border-radius: 25px;
     cursor: pointer;
-    transition: 0.3s;
+  
+    transition: transform 0.2s ease, background 0.3s ease;
   }
   
   .card button:hover {
     background: #b8791f;
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
   .price {
     display: inline-block;
